@@ -1,0 +1,1 @@
+select er.Name from employee e inner join employee er on e.Id = er.ManagerId where er.Salary > e.Salary;
