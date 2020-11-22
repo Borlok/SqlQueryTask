@@ -1,1 +1,11 @@
+/**
+Вывести дубликаты имейлов
+ */
+ Create table If Not Exists Person (Id int, Email varchar(255)
+ constraint pk_person PRIMARY KEY (Id)
+ );
+insert into Person (Id, Email) values ('1', 'a@b.com');
+insert into Person (Id, Email) values ('2', 'c@d.com');
+insert into Person (Id, Email) values ('3', 'a@b.com');
+
 select email from Person group by email having count(*) > 1;
